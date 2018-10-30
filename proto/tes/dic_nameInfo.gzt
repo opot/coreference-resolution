@@ -1,7 +1,7 @@
 encoding "utf-8";
 
 names "names"{
-  key = {"names.txt"  type=FILE}
+  key = {"../result/raw/names.txt"  type=FILE}
 }
 
 names "strange_names"{

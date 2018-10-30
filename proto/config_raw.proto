@@ -1,0 +1,23 @@
+encoding "utf8"; 
+TTextMinerConfig {
+  Dictionary = "proto/dic_raw.gzt";
+  PrintRules = "result/raw/rules.txt";
+  PrintTree = "result/raw/tree_raw.txt";
+  PrettyOutput = "result/raw/PrettyOutput.html";
+
+  Output = {
+   File="result/raw/raw_out.txt";
+   Format = text;
+  }
+ 
+  Articles = [
+    { Name = "nameExtraction"}
+  ]
+
+  Facts = [
+    {Name = "RawName"}
+  ]
+
+}
+
+

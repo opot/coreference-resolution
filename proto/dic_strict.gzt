@@ -4,13 +4,15 @@ import "articles_base.proto";
 import "kwtypes.proto";
 import "facttypes.proto";
 
-import "tes/dic_nameInfo.gzt";
+import "tes/dic_diminutive.gzt";
 import "tes/dic_location.gzt";
 import "tes/dic_org.gzt";
+import "tes/dic_nameInfo.gzt";
 import "tes/dic_misc.gzt";
 
 
-TAuxDicArticle "nameExtraction"
-{
-    key = { "tomita:name_extraction.cxx" type=CUSTOM }
+TAuxDicArticle "finishNameExtraction"{
+    key = { "tomita:..//extractions/full_name_extraction.cxx" type=CUSTOM }
 }
+
+

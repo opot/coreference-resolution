@@ -1,0 +1,23 @@
+encoding "utf8"; 
+TTextMinerConfig {
+  Dictionary = "proto/dic_strict.gzt";
+  PrintRules = "result/xml/rules.txt";
+  PrintTree = "result/xml/tree.txt";
+  PrettyOutput = "result/xml/PrettyOutput.html";
+
+  Output = {
+   File = "result/xml/strict_out.xml";
+   Format = xml;
+  }
+ 
+  Articles = [
+   { Name = "finishNameExtraction"}
+  ]
+
+  Facts=[
+   { Name = "StrictName" }
+  ]
+
+}
+
+

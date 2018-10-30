@@ -2,9 +2,9 @@ from collections import Counter
 import re
 
 
-FILE = open('raw_out.txt')
-NAMES = open('tes/names.txt', 'w')
-MISC = open('tes/misc.txt', 'w')
+FILE = open('result/raw/raw_out.txt')
+NAMES = open('result/raw/names.txt', 'w')
+MISC = open('result/raw/misc.txt', 'w')
 
 
 justnames = Counter()

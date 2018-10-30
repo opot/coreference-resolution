@@ -1,7 +1,7 @@
 encoding "utf-8";
 
 stop "misc"{
-  key = {"misc.txt" type = FILE}
+  key = {"../result/raw/misc.txt" type = FILE}
 }	
 
 stop "not_descr" {

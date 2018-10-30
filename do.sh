@@ -1,13 +1,16 @@
-rm tes/names.txt
-rm tes/misc.txt
-touch tes/names.txt
-touch tes/misc.txt
+#!/bin/bash
 
-cat $1 | ~/abbyy/yandex/tomita-parser/build-debug/bin/tomita-parser config_raw.proto
+rm -rf result/raw/*
+rm -rf result/xml/*
+touch result/raw/names.txt
+touch result/raw/misc.txt
+
+cat $1 | tomita-parser proto/config_raw.proto
 python3 name.py
-cat $1 | ~/abbyy/yandex/tomita-parser/build-debug/bin/tomita-parser config_strict_xml.proto
-#cat $1 | ~/abbyy/yandex/tomita-parser/build-debug/bin/tomita-parser config_strict_txt.proto
+cat $1 | tomita-parser proto/config_strict_xml.proto
+#cat $1 | tomita-parser config_strict_txt.proto
 
-python3 clusterize.py clusters.txt
+python3 clusterize.py result/clusters.txt
 
-rm *bin
+rm extractions/*.bin
+rm proto/*.bin
