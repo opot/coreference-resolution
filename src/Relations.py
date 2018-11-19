@@ -71,7 +71,8 @@ def r(mentions, m, n, match_type):
 
     int_type = match_type.value
     param = attrib[int_type]
-    result = StringCmp.compare_values(mentions[m][param], mentions[n][param], gender=(int_type == MatchType.GenderStrict))
+    result = StringCmp.compare_values(mentions[m][param], mentions[n][param],
+                                      gender=(int_type == MatchType.GenderStrict))
 
     if result == StringCmp.Mismatch:
         return -1.0
@@ -86,7 +87,10 @@ def r(mentions, m, n, match_type):
     assert False
 
 
-coeffs = [1.0 for i in range(10)]
+coeffs = [2.37865952e+000, 1.49723484e+000, 1.45603707e-136,
+          2.40788311e+000, 6.77331372e-001, 3.42756345e-137,
+          6.75451402e-001, 2.51671768e-136, 5.53567541e-137,
+          2.36343975e+000]
 
 
 def informative_score(match_type):
